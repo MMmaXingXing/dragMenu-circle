@@ -16,8 +16,8 @@ Page({
       width: "",
       height: ""
     },
-    w: 0,
-    h:0,
+    w: 50,
+    h:50,
     type: "",
     dragx: "",
     dragy: ""
@@ -40,6 +40,13 @@ Page({
   },
   // 内部方法建议以下划线开头
   touchMoveChange(e) {
+    if (this.pubMove >= 3) {
+        this.pubMove = 0;
+      } else {
+        ++this.pubMove;
+        return;
+      }
+
     this.takeback();
     this.setData({
       isPopping: true
@@ -166,6 +173,7 @@ Page({
 
   onLoad: function (options) {
     // 生命周期函数--监听页面加载
+    this.pubMove = 0;
   },
   onReady: function () {
     // 生命周期函数--监听页面初次渲染完成
