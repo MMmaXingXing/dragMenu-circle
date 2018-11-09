@@ -1,0 +1,32 @@
+.img-plus-style {
+  height: 120rpx;
+  width: 120rpx;
+  position: absolute;
+  bottom: 0rpx;
+  right: 0rpx;
+  z-index: 100;
+}
+
+.img-style {
+  height: 120rpx;
+  width: 120rpx;
+  position: absolute;
+  bottom: 0rpx;
+  right: 0rpx;
+  opacity: 0;
+}
+
+.container {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-height: 100%;
+}
+
+.drag {
+  position: absolute;
+  z-index: 10;
+  height: 150rpx;
+  width: 150rpx;
+}
